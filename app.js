@@ -166,7 +166,7 @@ d3.csv("Data.csv", function(err, healthData) {
     .attr("fill", "pink")
     .attr("opacity", ".5")
           ;
-  var stateLabels = chartGroup.selectAll("text")
+  var stateLabels = chartGroup.selectAll("g theCircle")
     .data(healthData)
     .enter()
     .append("text")
@@ -177,7 +177,7 @@ d3.csv("Data.csv", function(err, healthData) {
     .attr("font-size", "11px")
     .attr("fill", "red");
             ;
-
+ 
   // Create group for  2 x- axis labels
   var labelsGroup = chartGroup.append("g")
     .attr("transform", `translate(${width / 2}, ${height + 20})`);
